@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buquês de Cetim | Flores Eternas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🌸 Buquês de Cetim</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Buquês</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#encomendas">Encomendas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Buquês de Cetim Artesanais</h2>
+            <p>Flores que duram para sempre, feitas com amor e dedicação</p>
+            <a href="#produtos" class="btn">Ver Buquês</a>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+        <h2>Nossos Modelos de Buquês</h2>
+        <div class="produtos-grid">
+            <!-- Produto 1 -->
+            <div class="produto-card">
+                <img src="img/buque vermelho.jpeg" alt="Buquê de 10 Rosas" class="produto-img">
+                <div class="produto-info">
+                    <h3>Buquê de 10 Rosas</h3>
+                    <p class="produto-descricao">Lindas rosas vermelhas de cetim, perfeitas para presentear</p>
+                    <p class="produto-preco">R$ 50,00</p>
+                    <button class="btn-comprar" onclick="comprarProduto('Buquê de 10 Rosas', 'R$ 50,00')">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="produto-card">
+                <img src="img/WhatsApp Image 2026-02-14 at 09.48.18.jpeg" alt="Buquê Van Gogh" class="produto-img">
+                <div class="produto-info">
+                    <h3>Buquê Van Gogh</h3>
+                    <p class="produto-descricao">Inspirado na obra "A Noite Estrelada"</p>
+                    <p class="produto-preco">R$ 60,00</p>
+                    <button class="btn-comprar" onclick="comprarProduto('Buquê Van Gogh', 'R$ 60,00')">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="produto-card">
+                <img src="img/WhatsApp Image 2026-02-14 at 09.48.18 (3).jpeg" alt="Buquê com mais de 20 Rosas" class="produto-img">
+                <div class="produto-info">
+                    <h3>Buquê com mais de 20 Rosas</h3>
+                    <p class="produto-descricao">Lindas rosas de cetim, perfeita para presentear</p>
+                    <p class="produto-preco">R$ 100,00</p>
+                    <button class="btn-comprar" onclick="comprarProduto('Buquê com mais de 20 Rosas', 'R$ 100,00')">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="produto-card">
+                <img src="img/WhatsApp Image 2026-02-13 at 23.32.18.jpeg" alt="Buquê de 10 Rosas cor de Rosa" class="produto-img">
+                <div class="produto-info">
+                    <h3>Buquê de 10 Rosas cor de Rosa</h3>
+                    <p class="produto-descricao">Lindas rosas de cetim em um buquê especial</p>
+                    <p class="produto-preco">R$ 50,00</p>
+                    <button class="btn-comprar" onclick="comprarProduto('Buquê de 10 Rosas cor de Rosa', 'R$ 50,00')">
+                        <i class="fas fa-shopping-cart"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        </div> <!-- FIM da produtos-grid -->
+    </section> <!-- FIM da seção produtos -->
+
+    <!-- Galeria -->
+    <section id="galeria" class="galeria">
+        <h2>Galeria de Criações</h2>
+        <p class="galeria-subtitulo">Alguns dos buquês que já fiz com todo carinho</p>
+        
+        <div class="galeria-filtros">
+            <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="rosas">Rosas</button>
+            <button class="filtro-btn" data-filtro="personalizados">Personalizados</button>
+        </div>
+
+        <div class="galeria-grid" id="galeria-grid">
+            <!-- Item 1 -->
+            <div class="galeria-item" data-categoria="rosas">
+                <img src="img/buque vermelho.jpeg" alt="Buquê de 10 Rosas Vermelhas">
+                <div class="galeria-overlay">
+                    <h3>Buquê de Rosas 10 Vermelhas</h3>
+                    <p>Mais tradicional</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="galeria-item" data-categoria="personalizados">
+                <img src="img/WhatsApp Image 2026-02-14 at 09.48.18.jpeg" alt="Buquê Van Gogh">
+                <div class="galeria-overlay">
+                    <h3>Buquê Van Gogh</h3>
+                    <p>Inspirado na obra "A Noite Estrelada"</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="galeria-item" data-categoria="rosas">
+                <img src="img/WhatsApp Image 2026-02-13 at 23.32.18.jpeg" alt="Buquê de 10 Rosas cor de Rosa">
+                <div class="galeria-overlay">
+                    <h3>Buquê de 10 Rosas cor de Rosa</h3>
+                    <p>Sai um pouco do tradicional por não ser vermelho, mas continua sendo mágico e encantador.</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="galeria-item" data-categoria="personalizados">
+                <img src="img/WhatsApp Image 2026-02-14 at 09.48.18 (1).jpeg" alt="Cesta em formato de coração">
+                <div class="galeria-overlay">
+                    <h3>Cesta de Coração</h3>
+                    <p>Uma cesta em formato de coração, com metade cheia de rosas de cetim e a outra metade com Ferrero Rocher.</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="galeria-item" data-categoria="rosas">
+                <img src="img/WhatsApp Image 2026-02-14 at 09.48.18 (2).jpeg" alt="Buquê de Bombons com Rosa Solitária">
+                <div class="galeria-overlay">
+                    <h3>Buquê de Bombons com Rosa Solitária</h3>
+                    <p>Mix especial de cores, sabores e sentimentos.</p>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="galeria-item" data-categoria="personalizados">
+                <img src="img/WhatsApp Image 2026-02-14 at 09.48.18 (3).jpeg" alt="Buquê de 22 Rosas">
+                <div class="galeria-overlay">
+                    <h3>Buquê de 22 Rosas Vermelhas</h3>
+                    <p>Edição especial, contém mais de 22 rosas vermelhas, foi feito para um pedido de namoro.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para ver imagem ampliada -->
+        <div id="modal" class="modal">
+            <span class="modal-fechar">&times;</span>
+            <img class="modal-conteudo" id="modal-imagem">
+            <div id="modal-legenda" class="modal-legenda"></div>
+        </div>
+    </section>
+
+    <!-- Seção de Encomendas -->
+    <section id="encomendas" class="encomendas">
+        <h2>Faça sua Encomenda Personalizada</h2>
+        <div class="encomenda-container">
+            <form id="form-encomenda">
+                <div class="form-group">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">WhatsApp:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cores">Cores desejadas:</label>
+                    <input type="text" id="cores" name="cores" placeholder="Ex: rosa, vermelho, branco">
+                </div>
+                
+                <div class="form-group">
+                    <label for="detalhes">Detalhes adicionais:</label>
+                    <textarea id="detalhes" name="detalhes" rows="4" placeholder="Conte mais sobre o buquê dos seus sonhos..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="data">Data desejada:</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                
+                <button type="submit" class="btn-submit">Solicitar Orçamento</button>
+            </form>
+            
+            <div class="encomenda-info">
+                <h3>Como funciona?</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Escolha seu estilo</li>
+                    <li><i class="fas fa-check-circle"></i> Definimos juntos cores e tamanho</li>
+                    <li><i class="fas fa-check-circle"></i> Receba seu orçamento em até 24h</li>
+                    <li><i class="fas fa-check-circle"></i> Produção em 5-7 dias úteis</li>
+                    <li><i class="fas fa-check-circle"></i> Entrega ou retirada</li>
+                </ul>
+                <div class="precos-info">
+                    <h4>Preços médios:</h4>
+                    <p>Rosa solitária: R$ 12</p>
+                    <p>Buquê de 10 Rosas: R$ 50</p>
+                    <p>Buquê de mais de 20 Rosas: R$ 100</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <h2>Entre em Contato</h2>
+        <div class="contato-container">
+            <div class="contato-info">
+                <div class="contato-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <p>(55) 46 99989-2329</p>
+                    <a href="https://wa.me/5546999892329" target="_blank" class="btn-contato">Enviar Mensagem</a>
+                </div>
+                <div class="contato-item">
+                    <i class="fab fa-instagram"></i>
+                    <p>@maria.ed.fritzen</p>
+                    <a href="https://instagram.com/maria.ed.fritzen" target="_blank" class="btn-contato">Seguir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Buquês de Cetim - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

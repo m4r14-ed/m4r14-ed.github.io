@@ -1,0 +1,636 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(106, 13, 173, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b19cd9;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(106, 13, 173, 0.7), rgba(30, 60, 114, 0.8)),
+                url('https://images.unsplash.com/photo-1561181286-d3fee7d55364?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(106, 13, 173, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(106, 13, 173, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+    border: none;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #7b1fa2, #2a4a8a);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.4);
+}
+
+/* Produtos Section */
+.produtos {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.produto-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(106, 13, 173, 0.3);
+}
+
+.produto-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 1.5rem;
+}
+
+.produto-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1e3c72;
+}
+
+.produto-descricao {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.produto-preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.btn-comprar {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-comprar:hover {
+    background: linear-gradient(135deg, #7b1fa2, #2a4a8a);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.4);
+}
+
+/* Galeria Section */
+.galeria {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, #f9f5ff, #f0f5ff);
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.galeria-subtitulo {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.galeria-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.filtro-btn {
+    padding: 0.5rem 1.5rem;
+    background: white;
+    border: 2px solid #6a0dad;
+    border-radius: 30px;
+    color: #6a0dad;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtro-btn:hover,
+.filtro-btn.ativo {
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    color: white;
+    border-color: transparent;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    aspect-ratio: 1;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(106, 13, 173, 0.3);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+.galeria-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(106, 13, 173, 0.9), transparent);
+    color: white;
+    padding: 1.5rem 1rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover .galeria-overlay {
+    transform: translateY(0);
+}
+
+.galeria-overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.galeria-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow: auto;
+}
+
+.modal-conteudo {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(106, 13, 173, 0.5);
+}
+
+.modal-legenda {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    font-size: 1.2rem;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.modal-fechar:hover {
+    color: #6a0dad;
+}
+
+/* Encomendas Section */
+.encomendas {
+    background: linear-gradient(135deg, #f0e6ff, #e6f0ff);
+    padding: 5rem 5%;
+}
+
+.encomendas h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.encomenda-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(106, 13, 173, 0.15);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1e3c72;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #d4b5ff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6a0dad;
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.3);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #7b1fa2, #2a4a8a);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.4);
+}
+
+.encomenda-info {
+    background: linear-gradient(135deg, #f8f0ff, #f0f8ff);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.encomenda-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.encomenda-info ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.encomenda-info li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.encomenda-info i {
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.precos-info {
+    border-top: 2px solid;
+    border-image: linear-gradient(135deg, #6a0dad, #1e3c72) 1;
+    padding-top: 1.5rem;
+}
+
+.precos-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #1e3c72;
+}
+
+.precos-info p {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #6a0dad;
+}
+
+/* Contato Section */
+.contato {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contato h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contato-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contato-item {
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #f8f0ff, #f0f8ff);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contato-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(106, 13, 173, 0.2);
+}
+
+.contato-item i {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.contato-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e3c72;
+    margin: 0;
+}
+
+.btn-contato {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-contato:hover {
+    background: linear-gradient(135deg, #7b1fa2, #2a4a8a);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1e3c72, #6a0dad);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-btn {
+        display: block;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .encomenda-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+    
+    .produtos h2,
+    .encomendas h2,
+    .contato h2,
+    .galeria h2 {
+        font-size: 2rem;
+    }
+    
+    .contato-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .contato-item {
+        padding: 2rem;
+    }
+    
+    .contato-item i {
+        font-size: 2.5rem;
+    }
+    
+    .contato-item p {
+        font-size: 1.1rem;
+    }
+    
+    .galeria-filtros {
+        gap: 0.5rem;
+    }
+    
+    .filtro-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0e6ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #6a0dad, #1e3c72);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #7b1fa2, #2a4a8a);
+}
